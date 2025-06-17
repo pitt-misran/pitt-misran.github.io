@@ -32,37 +32,37 @@
                 console.error('Headline element not found');
                 return;
         }
-        
-            if (currentIndex <= plainText.length) {
-                    let displayText = '';
 
-                    // Build the text up to current position
-                    for (let i = 0; i < currentIndex; i++) {
-                            displayText += plainText[i];
-                    }
+        if (currentIndex <= plainText.length) {
+                let displayText = '';
 
-                    // Add scrambled characters for upcoming positions
-                    for (let i = currentIndex; i < Math.min(currentIndex + 10, plainText.length); i++) {
-                            if (plainText[i] === ' ') {
-                                    displayText += ' ';
-                            } else {
-                                    displayText += getRandomChar();
-                            }
-                    }
+                // Build the text up to current position
+                for (let i = 0; i < currentIndex; i++) {
+                        displayText += plainText[i];
+                }
 
-                    // Apply HTML formatting
-                    let formattedText = displayText;
-                    formattedText = formattedText.replace('AWS expert', '<span class="text-[#C778DD]">AWS expert</span>');
-                    formattedText = formattedText.replace('back-end developer', '<span class="text-[#C778DD]">back-end developer</span>');
+                // Add scrambled characters for upcoming positions
+                for (let i = currentIndex; i < Math.min(currentIndex + 10, plainText.length); i++) {
+                        if (plainText[i] === ' ') {
+                                displayText += ' ';
+                        } else {
+                                displayText += getRandomChar();
+                        }
+                }
 
-                    headline.innerHTML = formattedText;
-                    currentIndex++;
+                // Apply HTML formatting
+                let formattedText = displayText;
+                formattedText = formattedText.replace('AWS expert', '<span class="text-[#C778DD]">AWS expert</span>');
+                formattedText = formattedText.replace('back-end developer', '<span class="text-[#C778DD]">back-end developer</span>');
 
-                    setTimeout(typeWriter, typingSpeed);
-            } else {
-                    // Final text with proper formatting
-                    headline.innerHTML = finalText;
-            }
+                headline.innerHTML = formattedText;
+                currentIndex++;
+
+                setTimeout(typeWriter, typingSpeed);
+        } else {
+                // Final text with proper formatting
+                headline.innerHTML = finalText;
+        }
     }
 
     // Start animation after a brief delay
