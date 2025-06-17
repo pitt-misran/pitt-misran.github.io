@@ -28,6 +28,11 @@
     }
 
     function typeWriter() {
+        if (!headline) {
+                console.error('Headline element not found');
+                return;
+        }
+        
             if (currentIndex <= plainText.length) {
                     let displayText = '';
 
