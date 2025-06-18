@@ -11,5 +11,8 @@ export default defineConfig({
 
   vite: {
     plugins: [tailwindcss()]
-  }
+  },
+
+  site: 'https://mohd-misran.github.io',
+  base: '/portfolio'
 });
