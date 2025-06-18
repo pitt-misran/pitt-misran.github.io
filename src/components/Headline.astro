@@ -3,7 +3,8 @@ import profileImage from '../assets/profile.jpg';
 ---
 
 <!-- Hero Section with Headshot -->
-<div class="flex items-start justify-between mt-16 mb-8 min-h-[500px]">
+<!-- Desktop/Tablet: Horizontal Layout -->
+<div class="hidden md:flex items-start justify-between mt-16 mb-8 min-h-[500px]">
     <!-- Left Content -->
     <div class="flex-1 pr-8">
         <h1 id="headline" class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight min-h-[1.2em] mb-8">
@@ -39,8 +40,46 @@ import profileImage from '../assets/profile.jpg';
     </div>
 </div>
 
+<!-- Mobile: Vertical Layout -->
+<div class="md:hidden flex flex-col items-center mt-8 mb-8 px-4">
+    <!-- Profile Image (Top on Mobile) -->
+    <div class="flex flex-col items-center mb-8">
+        <!-- Framed Profile Image -->
+        <div class="border-2 border-[#ABB2BF] p-2 rounded-lg mb-6">
+            <img 
+                src={profileImage.src} 
+                alt="Mohammed Misran" 
+                class="w-64 h-80 object-cover rounded-md"
+            />
+        </div>
+        
+        <!-- Status Bar -->
+        <div class="inline-flex items-center border border-[#ABB2BF] px-4 py-2">
+            <div class="w-4 h-4 bg-[#C778DD] mr-3"></div>
+            <span class="text-[#ABB2BF]">Currently working on</span>
+            <span class="text-white ml-1 font-semibold">&nbsp;Portfolio</span>
+        </div>
+    </div>
+    
+    <!-- Text Content (Bottom on Mobile) -->
+    <div class="text-center">
+        <h1 id="headline-mobile" class="text-2xl sm:text-3xl font-bold text-white leading-tight min-h-[1.2em] mb-8">
+            <!-- Content will be populated by JavaScript -->
+        </h1>
+        
+        <!-- <p class="text-[#ABB2BF] text-lg mb-8">
+            He crafts responsive websites where technologies meet creativity
+        </p> -->
+        
+        <!-- <button class="border-2 border-[#C778DD] text-[#C778DD] px-6 py-3 font-medium hover:bg-[#C778DD] hover:text-white transition-colors">
+            Contact me!!
+        </button> -->
+    </div>
+</div>
+
 <script>
     const headline = document.getElementById('headline');
+    const headlineMobile = document.getElementById('headline-mobile');
     const finalText = 'Misran is an <span class="text-[#C778DD]">AWS expert</span> and a <span class="text-[#C778DD]">back-end developer</span>';
     const plainText = 'Misran is an AWS expert and a back-end developer';
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()';
@@ -52,9 +91,8 @@ import profileImage from '../assets/profile.jpg';
             return characters[Math.floor(Math.random() * characters.length)];
     }
 
-    function typeWriter() {
-        if (!headline) {
-                console.error('Headline element not found');
+    function typeWriter(targetElement: HTMLElement) {
+        if (!targetElement) {
                 return;
         }
 
@@ -80,16 +118,37 @@ import profileImage from '../assets/profile.jpg';
                 formattedText = formattedText.replace('AWS expert', '<span class="text-[#C778DD]">AWS expert</span>');
                 formattedText = formattedText.replace('back-end developer', '<span class="text-[#C778DD]">back-end developer</span>');
 
-                headline.innerHTML = formattedText;
+                targetElement.innerHTML = formattedText;
                 currentIndex++;
 
-                setTimeout(typeWriter, typingSpeed);
+                setTimeout(() => typeWriter(targetElement), typingSpeed);
         } else {
                 // Final text with proper formatting
-                headline.innerHTML = finalText;
+                targetElement.innerHTML = finalText;
         }
     }
 
     // Start animation after a brief delay
-    setTimeout(typeWriter, 500);
+    setTimeout(() => {
+        // Determine which headline element is visible and animate it
+        if (headline && window.getComputedStyle(headline).display !== 'none') {
+            typeWriter(headline);
+        } else if (headlineMobile && window.getComputedStyle(headlineMobile).display !== 'none') {
+            typeWriter(headlineMobile);
+        }
+    }, 500);
+
+    // Handle window resize to restart animation on the correct element
+    window.addEventListener('resize', () => {
+        // Reset animation
+        currentIndex = 0;
+        
+        setTimeout(() => {
+            if (headline && window.getComputedStyle(headline).display !== 'none') {
+                typeWriter(headline);
+            } else if (headlineMobile && window.getComputedStyle(headlineMobile).display !== 'none') {
+                typeWriter(headlineMobile);
+            }
+        }, 100);
+    });
 </script>

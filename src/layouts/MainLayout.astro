@@ -1,12 +1,103 @@
 ---
 import Header from "../components/Header.astro";
 import Headline from "../components/Headline.astro";
+import MobileNavigation from "../components/MobileNavigation.astro";
 ---
 
 <!-- NOTE: For differentiating layout -->
 <!-- <div class="col-span-8 p-4 bg-blue-500/20"> -->
-<div class="col-span-8 p-4">
-    <Header />
+<div class="w-full p-4 md:col-span-8">
+    <!-- Mobile Navigation Component -->
+    <MobileNavigation />
+    
+    <!-- Desktop Header (hidden on mobile) -->
+    <div class="hidden md:block">
+        <Header />
+    </div>
+    
+    <!-- Mobile Header (visible only on mobile) -->
+    <div class="md:hidden">
+        <header class="flex justify-between items-center py-4">
+            <!-- Icon + Name (center aligned on mobile) -->
+            <a href="#home" class="flex items-center space-x-2">
+                <img src="/portfolio/favicon.svg" alt="Code Icon" class="w-8 h-8" />
+                <span class="text-[#ABB2BF] text-lg font-medium">Mohammed Misran</span>
+            </a>
+            
+            <!-- Hamburger Button -->
+            <button 
+                id="mobile-menu-button" 
+                class="p-2 text-[#ABB2BF] hover:text-white transition-colors"
+                aria-label="Toggle mobile menu"
+            >
+                <svg id="hamburger-icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg id="close-icon" class="w-8 h-8 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </header>
+    </div>
+    
     <Headline />
     <slot />
 </div>
+
+<script>
+    // Mobile navigation functionality
+    const menuButton = document.getElementById('mobile-menu-button');
+    const closeButton = document.getElementById('mobile-close-button');
+    const drawer = document.getElementById('mobile-drawer');
+    const backdrop = document.getElementById('mobile-backdrop');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+    const navLinks = document.querySelectorAll('.mobile-nav-link');
+
+    let isOpen = false;
+
+    function toggleMenu() {
+        isOpen = !isOpen;
+        
+        if (isOpen) {
+            // Open menu
+            drawer?.classList.remove('translate-x-full');
+            backdrop?.classList.remove('hidden');
+            hamburgerIcon?.classList.add('hidden');
+            closeIcon?.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        } else {
+            // Close menu
+            drawer?.classList.add('translate-x-full');
+            backdrop?.classList.add('hidden');
+            hamburgerIcon?.classList.remove('hidden');
+            closeIcon?.classList.add('hidden');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+    }
+
+    // Toggle menu on hamburger button click
+    menuButton?.addEventListener('click', toggleMenu);
+
+    // Close menu on close button click (in drawer)
+    closeButton?.addEventListener('click', toggleMenu);
+
+    // Close menu on backdrop click
+    backdrop?.addEventListener('click', toggleMenu);
+
+    // Close menu when navigation link is clicked
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (isOpen) {
+                toggleMenu();
+            }
+        });
+    });
+
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && isOpen) {
+            toggleMenu();
+        }
+    });
+</script>
