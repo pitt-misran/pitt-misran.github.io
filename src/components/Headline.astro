@@ -1,5 +1,6 @@
 ---
 import profileImage from '../assets/profile.jpg';
+import TypewriterHeadline from './TypewriterHeadline.tsx';
 ---
 
 <!-- Hero Section with Headshot -->
@@ -7,9 +8,7 @@ import profileImage from '../assets/profile.jpg';
 <div class="hidden md:flex items-start justify-between mt-16 mb-8 min-h-[500px]">
     <!-- Left Content -->
     <div class="flex-1 pr-8">
-        <h1 id="headline" class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight min-h-[1.2em] mb-8">
-            <!-- Content will be populated by JavaScript -->
-        </h1>
+        <TypewriterHeadline client:load />
         
         <!-- <p class="text-[#ABB2BF] text-lg mb-8 max-w-md">
             He crafts responsive websites where technologies meet creativity
@@ -45,9 +44,7 @@ import profileImage from '../assets/profile.jpg';
 
     <!-- Text Content (Bottom on Mobile) -->
     <div class="text-center">
-        <h1 id="headline-mobile" class="text-2xl sm:text-3xl font-bold text-white leading-tight min-h-[1.2em] mb-8">
-            <!-- Content will be populated by JavaScript -->
-        </h1>
+        <TypewriterHeadline isMobile={true} client:load />
         
         <!-- <p class="text-[#ABB2BF] text-lg mb-8">
             He crafts responsive websites where technologies meet creativity
@@ -94,6 +91,7 @@ import profileImage from '../assets/profile.jpg';
     <!-- </div> -->
 </div>
 
+{/*}
 <script>
     const headline = document.getElementById('headline');
     const headlineMobile = document.getElementById('headline-mobile');
@@ -169,3 +167,4 @@ import profileImage from '../assets/profile.jpg';
         setTimeout(startAnimation, 100);
     });
 </script>
+*/}
