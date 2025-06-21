@@ -3,6 +3,7 @@ import Header from "../components/Header.astro";
 import Headline from "../components/Headline.astro";
 import MobileNavigation from "../components/MobileNavigation.astro";
 import LanguageTechStack from "../components/LanguageTechStack.tsx";
+import BackendTechStack from "../components/BackendTechStack.tsx";
 ---
 
 <!-- NOTE: For differentiating layout -->
@@ -51,6 +52,7 @@ import LanguageTechStack from "../components/LanguageTechStack.tsx";
     </div>
 
     <LanguageTechStack client:load />
+    <BackendTechStack client:load />
     <slot />
 </div>
 
