@@ -1,25 +1,23 @@
-import pythonIcon from '../assets/3d-icons/python.png';
-import javaIcon from '../assets/3d-icons/java.png';
-import nodejsIcon from '../assets/3d-icons/nodejs.png';
-import javascriptIcon from '../assets/3d-icons/javascript.png';
-import typescriptIcon from '../assets/3d-icons/typescript.png';
-import goLangIcon from '../assets/3d-icons/golang.png';
-import scalaIcon from '../assets/3d-icons/scala.png';
-import sqlIcon from '../assets/3d-icons/sql.png';
-import htmlIcon from '../assets/3d-icons/html.png';
-import cssIcon from '../assets/3d-icons/css.png';
+import pythonIcon from '../assets/tech-stack/languages/python.png';
+import javaIcon from '../assets/tech-stack/languages/java.png';
+import nodejsIcon from '../assets/tech-stack/languages/nodejs.png';
+import javascriptIcon from '../assets/tech-stack/languages/javascript.png';
+import typescriptIcon from '../assets/tech-stack/languages/typescript.png';
+import goLangIcon from '../assets/tech-stack/languages/golang.png';
+import scalaIcon from '../assets/tech-stack/languages/scala.png';
+import sqlIcon from '../assets/tech-stack/languages/sql.png';
+import htmlIcon from '../assets/tech-stack/languages/html.png';
+import cssIcon from '../assets/tech-stack/languages/css.png';
 import TechStack from './TechStack';
 
-// Example tech stack with PNG icon paths
-// Replace these paths with your actual PNG icon files
 const technologies = [
-  {
-    iconPath: pythonIcon.src,
-    name: 'Python'
-  },
   {
     iconPath: javaIcon.src,
     name: 'Java'
+  },
+  {
+    iconPath: pythonIcon.src,
+    name: 'Python'
   },
   {
     iconPath: nodejsIcon.src,
