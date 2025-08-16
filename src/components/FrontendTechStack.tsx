@@ -50,10 +50,9 @@ const technologies = [
 
 export default function FrontendTechStack() {
   return (
-    <div className="py-4">
+    <div className="py-2">
       <TechStack 
         technologies={technologies}
-        title="Frontend Development"
         itemsPerView={{
           mobile: 2,
           tablet: 4,

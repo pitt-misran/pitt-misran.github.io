@@ -45,10 +45,9 @@ const technologies = [
 
 export default function BigDataTechStack() {
   return (
-    <div className="py-4">
+    <div className="py-2">
       <TechStack 
         technologies={technologies}
-        title="Big Data & Analytics"
         itemsPerView={{
           mobile: 2,
           tablet: 4,

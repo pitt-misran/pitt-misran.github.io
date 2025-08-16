@@ -55,10 +55,9 @@ const technologies = [
 
 export default function LanguageTechStack() {
   return (
-    <div className="py-4">
+    <div className="py-2">
       <TechStack 
         technologies={technologies}
-        title="Programming Languages"
         itemsPerView={{
           mobile: 2,
           tablet: 4,

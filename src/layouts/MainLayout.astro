@@ -2,11 +2,7 @@
 import Header from "../components/Header.astro";
 import Headline from "../components/Headline.astro";
 import MobileNavigation from "../components/MobileNavigation.astro";
-import LanguageTechStack from "../components/LanguageTechStack.tsx";
-import BackendTechStack from "../components/BackendTechStack.tsx";
-import AIMLTechStack from "@/components/AIMLTechStack";
-import BigDataTechStack from "../components/BigDataTechStack";
-import FrontendTechStack from "../components/FrontendTechStack.tsx";
+import TabbedSkillsSection from "../components/TabbedSkillsSection.tsx";
 ---
 
 <!-- NOTE: For differentiating layout -->
@@ -54,11 +50,7 @@ import FrontendTechStack from "../components/FrontendTechStack.tsx";
     <div class="flex-1 h-px bg-[#C778DD]"></div>
     </div>
 
-    <LanguageTechStack client:load />
-    <BackendTechStack client:load />
-    <AIMLTechStack client:load />
-    <BigDataTechStack client:load />
-    <FrontendTechStack client:load />
+    <TabbedSkillsSection client:load />
     <slot />
 </div>
 
