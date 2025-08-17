@@ -1,11 +1,6 @@
 import { useState, useEffect } from 'react';
 import TechComponent from './TechComponent';
 
-interface TechItem {
-  iconPath: string;
-  name: string;
-}
-
 interface TechStackProps {
   technologies: TechItem[];
   title?: string;
