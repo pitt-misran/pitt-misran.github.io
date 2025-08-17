@@ -118,7 +118,6 @@ const TechStack = ({ technologies, title, itemsPerView = { mobile: 2, tablet: 4,
             ))}
           </div>
         </div>
-
       </div>
     </div>
   );
