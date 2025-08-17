@@ -1,8 +1,10 @@
 ---
+import SectionTitle from "@/components/SectionTitle";
 import Header from "../components/Header.astro";
 import Headline from "../components/Headline.astro";
 import MobileNavigation from "../components/MobileNavigation.astro";
 import TabbedSkillsSection from "../components/TabbedSkillsSection.tsx";
+import ProjectsSection from "../components/ProjectsSection.tsx";
 ---
 
 <!-- NOTE: For differentiating layout -->
@@ -43,14 +45,10 @@ import TabbedSkillsSection from "../components/TabbedSkillsSection.tsx";
     
     <Headline />
 
-    {/* Section Title */}
-    <div class="flex items-center">
-    {/* <span className="text-[#C778DD] text-2xl font-bold mr-4">#</span> */}
-    <h2 class="text-white text-2xl font-bold mr-4"><span class="text-[#C778DD]">#</span>skills</h2>
-    <div class="flex-1 h-px bg-[#C778DD]"></div>
-    </div>
-
+    <SectionTitle title="skills" />
     <TabbedSkillsSection client:load />
+    
+    <ProjectsSection client:load />
     <slot />
 </div>
 
