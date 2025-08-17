@@ -7,7 +7,7 @@ import TypewriterHeadline from './TypewriterHeadline.tsx';
 <!-- Desktop/Tablet: Horizontal Layout -->
 <div class="hidden md:flex items-start justify-between mt-16 mb-8 min-h-[500px]">
     <!-- Left Content -->
-    <div class="flex-1 pr-8">
+    <div class="flex-1 pr-8 mr-8">
         <TypewriterHeadline client:load />
         
         <!-- <p class="text-[#ABB2BF] text-lg mb-8 max-w-md">
@@ -22,11 +22,11 @@ import TypewriterHeadline from './TypewriterHeadline.tsx';
     <!-- Right Content - Profile Image -->
     <div class="flex flex-col items-center">
         <!-- Framed Profile Image -->
-        <div class="border-2 border-[#ABB2BF] p-2 rounded-lg mb-8">
+        <div class="border-2 border-[#ABB2BF] p-2 mb-8">
             <img 
                 src={profileImage.src} 
                 alt="Mohammed Misran" 
-                class="w-80 h-96 object-cover rounded-md"
+                class="w-80 h-96 object-cover"
             />
         </div>
         
