@@ -106,14 +106,8 @@ const TechStack = ({ technologies, title, itemsPerView = { mobile: 2, tablet: 4,
             }}
           >
             {technologies.map((tech, index) => (
-              <div 
-                key={index}
-                className="flex-shrink-0 w-1/2 sm:w-1/4 lg:w-1/6"
-              >
-                <TechComponent 
-                  iconPath={tech.iconPath} 
-                  name={tech.name} 
-                />
+              <div key={index} className="flex-shrink-0 w-1/2 sm:w-1/4 lg:w-1/6">
+                <TechComponent icon={tech.icon} name={tech.name} />
               </div>
             ))}
           </div>

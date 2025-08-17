@@ -1,20 +1,11 @@
-import React from 'react';
+interface TechComponentProps extends TechItem {}
 
-interface TechComponentProps {
-  iconPath: string;
-  name: string;
-}
-
-export default function TechComponent({ iconPath, name }: TechComponentProps) {
+export default function TechComponent({ icon, name }: TechComponentProps) {
   return (
     <div className="flex flex-col items-center justify-center p-4 min-w-[120px] group cursor-pointer">
       {/* Icon container with hover effect */}
       <div className="flex items-center justify-center w-16 h-16 mb-3 transition-transform duration-200 group-hover:scale-110">
-        <img 
-          src={iconPath} 
-          alt={`${name} icon`}
-          className="w-12 h-12 object-contain"
-        />
+        <img src={icon.src} alt={`${name} icon`} className="w-12 h-12 object-contain" />
       </div>
       
       {/* Tech name */}
