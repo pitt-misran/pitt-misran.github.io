@@ -22,12 +22,10 @@ export default function TechStack({
   itemsPerView = { mobile: 2, tablet: 4, desktop: 6 }
 }: TechStackProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [forceUpdate, setForceUpdate] = useState(0);
 
   // Force re-render on window resize to update navigation state
   useEffect(() => {
     const handleResize = () => {
-      setForceUpdate(prev => prev + 1);
       // Reset to valid index if current index is out of bounds
       const maxIndex = getMaxIndex();
       if (currentIndex > maxIndex) {
