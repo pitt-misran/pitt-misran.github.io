@@ -11,11 +11,7 @@ interface TechStackProps {
   };
 }
 
-export default function TechStack({ 
-  technologies,
-  title,
-  itemsPerView = { mobile: 2, tablet: 4, desktop: 6 }
-}: TechStackProps) {
+const TechStack = ({ technologies, title, itemsPerView = { mobile: 2, tablet: 4, desktop: 6 } }: TechStackProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Force re-render on window resize to update navigation state
@@ -126,4 +122,6 @@ export default function TechStack({
       </div>
     </div>
   );
-}
+};
+
+export default TechStack;
