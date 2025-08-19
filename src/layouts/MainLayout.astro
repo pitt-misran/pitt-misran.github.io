@@ -4,6 +4,7 @@ import Header from "../components/Header.astro";
 import Headline from "../components/Headline.astro";
 import MobileNavigation from "../components/MobileNavigation.astro";
 import TabbedSkillsSection from "../components/TabbedSkillsSection.tsx";
+import AboutMeSection from "@/components/AboutMeSection.tsx";
 import ProjectsSection from "../components/ProjectsSection.tsx";
 ---
 
@@ -47,6 +48,8 @@ import ProjectsSection from "../components/ProjectsSection.tsx";
 
     <SectionTitle title="skills" />
     <TabbedSkillsSection client:load />
+    
+    <AboutMeSection client:load />
     
     <ProjectsSection client:load />
     <slot />

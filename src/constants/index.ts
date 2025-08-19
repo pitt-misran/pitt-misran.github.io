@@ -1,3 +1,3 @@
-import { technologies, techLabels } from './technologies';
+import { technologies, techLabels, recentTechnologies } from './technologies';
 
-export { technologies, techLabels };
+export { technologies, techLabels, recentTechnologies };

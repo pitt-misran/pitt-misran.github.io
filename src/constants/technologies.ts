@@ -155,3 +155,24 @@ export const techLabels: Record<keyof Technologies, string> = {
   'big-data': 'Big Data',
   'frontend': 'Frontend',
 }
+
+export const recentTechnologies = [
+  [
+    'Amazon Bedrock',
+    'AWS Lambda',
+    'Amazon DynamoDB',
+    'Amazon S3 Vectors',
+  ],
+  [
+    'Pydantic AI',
+    'GraphQL',
+    'Next.js',
+    'Tailwind CSS'
+  ],
+  [
+    'Spring Boot',
+    'PostgreSQL',
+    'Kubernetes',
+    'Docker'
+  ]
+];
