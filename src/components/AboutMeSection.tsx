@@ -5,7 +5,7 @@ export default function AboutMeSection() {
   return (
     <>
       <SectionTitle title="about-me" />
-      <div className="mt-8 mb-16">
+      <div className="mb-16 px-8 py-8">
         {/* About Me Description */}
         <div className="mb-8 text-justify">
           <p className="text-[#ABB2BF] text-base leading-relaxed">
@@ -22,7 +22,7 @@ export default function AboutMeSection() {
           </p>
           <p className="text-[#ABB2BF] text-base leading-relaxed mt-4">
             <span className="text-[#C778DD] font-bold">Two-time Drummer Award winner at Kickdrum</span> &mdash; the
-            company's most prestigious honor&mdash;recognizing exceptional impact, leadership, and innovation.
+            company's most prestigious honor, recognizing exceptional impact, leadership, and innovation.
           </p>
         </div>
 
