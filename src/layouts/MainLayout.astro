@@ -46,12 +46,11 @@ import ProjectsSection from "../components/ProjectsSection.tsx";
     
     <Headline />
 
+    <AboutMeSection client:load />
+    <ProjectsSection client:load />
+    
     <SectionTitle title="skills" />
     <TabbedSkillsSection client:load />
-    
-    <AboutMeSection client:load />
-    
-    <ProjectsSection client:load />
     <slot />
 </div>
 
