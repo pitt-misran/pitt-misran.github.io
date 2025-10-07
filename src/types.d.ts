@@ -1,16 +1,11 @@
 declare global {
-  interface TechItem {
-    icon: ImageMetadata;
-    name: string;
-  }
-
   interface Technologies {
-    'languages': TechItem[];
-    'backend': TechItem[];
-    'ai-ml': TechItem[];
-    'vibe-coding': TechItem[];
-    'big-data': TechItem[];
-    'frontend': TechItem[];
+    'languages': string[];
+    'backend': string[];
+    'ai-ml': string[];
+    'tools': string[];
+    'big-data': string[];
+    'frontend': string[];
   }
 
   interface Project {

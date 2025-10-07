@@ -3,34 +3,34 @@ import SectionTitle from "@/components/SectionTitle";
 import Header from "../components/Header.astro";
 import Headline from "../components/Headline.astro";
 import MobileNavigation from "../components/MobileNavigation.astro";
-import TabbedSkillsSection from "../components/TabbedSkillsSection.tsx";
+import SkillsGrid from "../components/SkillsGrid.tsx";
 import AboutMeSection from "@/components/AboutMeSection.tsx";
 import ProjectsSection from "../components/ProjectsSection.tsx";
 ---
 
 <!-- NOTE: For differentiating layout -->
 <!-- <div class="col-span-8 p-4 bg-blue-500/20"> -->
-<div class="w-full p-4 md:col-span-8">
+<div class="w-full md:col-span-8">
     <!-- Mobile Navigation Component -->
     <MobileNavigation />
-    
-    <!-- Desktop Header (hidden on mobile) -->
-    <div class="hidden md:block">
+
+    <!-- Desktop Header (hidden on mobile, fixed at top) -->
+    <div class="hidden md:block md:fixed md:top-0 md:left-[16.666%] md:right-[16.666%] md:z-10 md:bg-[#282C33] md:px-4 md:py-2">
         <Header />
     </div>
-    
+
     <!-- Mobile Header (visible only on mobile) -->
-    <div class="md:hidden">
+    <div class="md:hidden p-4">
         <header class="flex justify-between items-center py-4">
             <!-- Icon + Name (center aligned on mobile) -->
             <a href="#home" class="flex items-center space-x-2">
                 <img src="/favicon.svg" alt="Code Icon" class="w-8 h-8" />
                 <span class="text-[#ABB2BF] text-lg font-medium">Mohammed Misran</span>
             </a>
-            
+
             <!-- Hamburger Button -->
-            <button 
-                id="mobile-menu-button" 
+            <button
+                id="mobile-menu-button"
                 class="p-2 text-[#ABB2BF] hover:text-white transition-colors"
                 aria-label="Toggle mobile menu"
             >
@@ -43,14 +43,29 @@ import ProjectsSection from "../components/ProjectsSection.tsx";
             </button>
         </header>
     </div>
-    
-    <Headline />
 
-    <AboutMeSection client:load />
-    <ProjectsSection client:load />
-    
-    <SectionTitle title="skills" />
-    <TabbedSkillsSection client:load />
+    <!-- Sections with scroll snap -->
+    <section class="p-4 md:snap-start md:h-screen md:flex md:items-center md:pt-16">
+        <Headline />
+    </section>
+
+    <section class="p-4 md:snap-start md:min-h-screen md:flex md:items-center">
+        <AboutMeSection client:load />
+    </section>
+
+    <section class="p-4 md:snap-start md:min-h-screen md:flex md:items-center">
+        <ProjectsSection client:load />
+    </section>
+
+    <section class="p-4 md:snap-start md:min-h-screen md:flex md:items-center">
+        <div class="w-full mt-16">
+            <div class="mb-12">
+                <SectionTitle title="skills" />
+            </div>
+            <SkillsGrid client:load />
+        </div>
+    </section>
+
     <slot />
 </div>
 
