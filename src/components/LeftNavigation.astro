@@ -1,0 +1,43 @@
+---
+import githubIcon from '../assets/github.svg';
+import linkedinIcon from '../assets/linkedin.svg';
+import resumeIcon from '../assets/resume.svg';
+---
+
+<div class="flex flex-col items-center absolute left-[50px] top-0">
+    <!-- Vertical Line -->
+    <div class="w-[1px] h-[191px] bg-[#ABB2BF] mb-4"></div>
+
+    <!-- Social Icons -->
+     <div class="flex flex-col items-center space-y-3">
+        <!-- GitHub Icon -->
+         <a href="https://github.com/Mohd-Misran" target="_blank">
+            <img src={githubIcon.src} alt="GitHub" class="w-8 h-8"/>
+            <!-- TODO: Attribution Link in Footer -->
+            <!-- <a href="https://iconscout.com/icons/github" class="text-underline font-size-sm" target="_blank">github</a> by <a href="https://iconscout.com/contributors/unicons" class="text-underline font-size-sm">Unicons Font</a> on <a href="https://iconscout.com" class="text-underline font-size-sm">IconScout</a> -->
+         </a>
+        
+        <!-- LinkedIn Icon -->
+        <a href="https://www.linkedin.com/in/mmisran" target="_blank">
+            <img src={linkedinIcon.src} alt="LinkedIn" class="w-8 h-8"/>
+            <!-- TODO: Attribution Link in Footer -->
+            <!-- <a href="https://iconscout.com/icons/linkedin" class="text-underline font-size-sm" target="_blank">linkedin</a> by <a href="https://iconscout.com/contributors/unicons" class="text-underline font-size-sm">Unicons Font</a> on <a href="https://iconscout.com" class="text-underline font-size-sm">IconScout</a> -->
+        </a>
+
+        <!-- Resume Icon -->
+         <a>
+            <img src={resumeIcon.src} alt="Resume" class="w-8 h-8"/>
+            <!-- TODO: Attribution Link in Footer -->
+            <!-- <a href="https://iconscout.com/icons/resume" class="text-underline font-size-sm" target="_blank">Resume</a> by <a href="https://iconscout.com/contributors/jemismali" class="text-underline font-size-sm" target="_blank">Jemis Mali</a> -->
+         </a>
+     </div>
+</div>
+
+<!-- TODO: Remove -->
+<!-- <style>
+    .social-icon {
+        /* filter: brightness(0) saturate(100%) invert(69%) sepia(8%) saturate(1015%) hue-rotate(200deg) brightness(98%) contrast(88%); */
+        filter: brightness(0) saturate(100%);
+        color: #ABB2BF;
+    }
+</style> -->

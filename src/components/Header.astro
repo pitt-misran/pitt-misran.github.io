@@ -1,0 +1,39 @@
+---
+import codeIcon from '../assets/code.svg';
+---
+
+<header class="flex justify-between items-center py-4">
+    <!-- Icon + Name -->
+    <a href="#home" class="flex items-center space-x-2">
+        <!-- Code Icon -->
+         <!-- <a href="#home"> -->
+             <img src={codeIcon.src} alt="Code Icon" class="w-8 h-8" />
+             <span class="text-[#ABB2BF] text-lg font-medium">Mohammed Misran</span>
+             <!-- TODO: Mention Attribution Link in the Footer -->
+             <!-- <a href="https://iconscout.com/icons/code" class="text-underline font-size-sm" target="_blank">Code</a> by <a href="https://iconscout.com/contributors/daniel-bruce" class="text-underline font-size-sm">Daniel Bruce</a> on <a href="https://iconscout.com" class="text-underline font-size-sm">IconScout</a> -->
+         <!-- </a> -->
+        </a>
+
+    <!-- Navigation links -->
+    <nav class="flex space-x-8">
+            <a href="#work" class="text-[#ABB2BF] hover:text-white transition-colors">
+                <span class="tag">#</span>work
+            </a>
+            <a href="#projects" class="text-[#ABB2BF] hover:text-white transition-colors">
+                <span class="tag">#</span>projects
+            </a>
+            <a href="#about-me" class="text-[#ABB2BF] hover:text-white transition-colors">
+                <span class="tag">#</span>about-me
+            </a>
+            <a href="#contact" class="text-[#ABB2BF] hover:text-white transition-colors">
+                <span class="tag">#</span>contact
+            </a>
+    </nav>
+
+</header>
+
+<style>
+    .tag {
+        color: #C778DD;
+    }
+</style>

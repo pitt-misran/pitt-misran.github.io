@@ -1,0 +1,65 @@
+<!-- <div class="mt-16 mb-8">
+    <h1 class="text-4xl-[#ABB2BF] md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+        Misran is an
+        <span class="text-[#C778DD]">AWS expert</span>
+        and a
+        <span class="text-[#C778DD]">back-end developer</span>
+    </h1>
+</div> -->
+
+  <div class="mt-16 mb-8">
+        <h1 id="headline" class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight min-h-[1.2em]">
+                <!-- Content will be populated by JavaScript -->
+        </h1>
+  </div>
+
+<script>
+    const headline = document.getElementById('headline');
+    const finalText = 'Misran is an <span class="text-[#C778DD]">AWS expert</span> and a <span class="text-[#C778DD]">back-end developer</span>';
+    const plainText = 'Misran is an AWS expert and a back-end developer';
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()';
+
+    let currentIndex = 0;
+    const typingSpeed = 50; // milliseconds
+    const scrambleIterations = 8; // how many random chars to show per position
+
+    function getRandomChar() {
+            return characters[Math.floor(Math.random() * characters.length)];
+    }
+
+    function typeWriter() {
+            if (currentIndex <= plainText.length) {
+                    let displayText = '';
+
+                    // Build the text up to current position
+                    for (let i = 0; i < currentIndex; i++) {
+                            displayText += plainText[i];
+                    }
+
+                    // Add scrambled characters for upcoming positions
+                    for (let i = currentIndex; i < Math.min(currentIndex + 10, plainText.length); i++) {
+                            if (plainText[i] === ' ') {
+                                    displayText += ' ';
+                            } else {
+                                    displayText += getRandomChar();
+                            }
+                    }
+
+                    // Apply HTML formatting
+                    let formattedText = displayText;
+                    formattedText = formattedText.replace('AWS expert', '<span class="text-[#C778DD]">AWS expert</span>');
+                    formattedText = formattedText.replace('back-end developer', '<span class="text-[#C778DD]">back-end developer</span>');
+
+                    headline.innerHTML = formattedText;
+                    currentIndex++;
+
+                    setTimeout(typeWriter, typingSpeed);
+            } else {
+                    // Final text with proper formatting
+                    headline.innerHTML = finalText;
+            }
+    }
+
+    // Start animation after a brief delay
+    setTimeout(typeWriter, 500);
+</script>
