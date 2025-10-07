@@ -8,7 +8,9 @@ export const projects: Project[] = [
     title: 'Smart Outreach Hub',
     description: 'Outreach automation tool',
     image: smartOutreachHubImg,
-    techStack: ['Pydantic AI', 'Bedrock', 'SQS', 'SNS', 'GraphQL', 'Next.js'],
+    techStack: ['Pydantic AI', 'Bedrock', 'SQS', 'SNS', 'GraphQL', 'React'],
+    githubUrl: 'https://github.com/pitt-cic/smart-outreach-hub',
+    learnMoreUrl: 'https://www.digital.pitt.edu/news/success-stories/pitt-athletics-leverages-aws-ai-supercharge-fan-and-alumni-engagement'
   },
   {
     id: 'join-society',
@@ -16,8 +18,7 @@ export const projects: Project[] = [
     description: 'Fashion e-commerce website',
     image: joinSocietyImg,
     techStack: ['Spring Boot', 'MySQL', 'Next.js', 'Tailwind CSS'],
-    githubUrl: 'https://github.com/Mohd-Misran/join-society'
-    // No cached URL for this project
+    githubUrl: 'https://github.com/Mohd-Misran/join-society',
   },
   {
     id: 'verse-vibe',
@@ -25,7 +26,6 @@ export const projects: Project[] = [
     description: 'Lyrics search engine',
     image: verseVibeImg,
     techStack: ['Spring Boot', 'Elasticsearch', 'Next.js', 'Material UI'],
-    githubUrl: 'https://github.com/Mohd-Misran/verse-vibe'
-    // No cached URL for this project
+    githubUrl: 'https://github.com/Mohd-Misran/verse-vibe',
   }
 ];
