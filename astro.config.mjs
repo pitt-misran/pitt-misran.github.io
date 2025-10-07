@@ -13,6 +13,6 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
-  site: 'https://pitt-misran.github.io',
+  site: 'http://mohammedmisran.me',
   base: '/'
 });
