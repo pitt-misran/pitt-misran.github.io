@@ -1,15 +1,13 @@
-import icons from '@/icons';
-
 export const technologies: Technologies = {
   languages: ['Java', 'Python', 'JavaScript & TypeScript', 'Go', 'Scala', 'SQL'],
   backend: ['Spring', 'Spring Boot', 'FastAPI', 'NestJS', 'GraphQL', 'Go Fiber'],
-  'ai-ml': ['Amazon Bedrock', 'Pydantic AI', 'LangChain', 'LangGraph', 'Pandas', 'NumPy'],
-  tools: ['Claude Code', 'Amazon Q', 'Cursor'],
+  'ai-ml': ['Pydantic AI', 'LangChain', 'LangGraph', 'Pandas', 'NumPy', 'Matplotlib'],
+  tools: ['Amazon Web Services (AWS)', 'Git', 'Docker', 'Kubernetes', 'Claude Code', 'Cursor'],
   'big-data': ['Apache Spark', 'Apache Kafka', 'Apache Samza', 'Databricks'],
-  frontend: ['Next.js', 'React', 'Astro', 'Redux', 'Tailwind CSS', 'Material UI'],
+  frontend: ['Next.js & React', 'React Native', 'Astro', 'Redux', 'Tailwind CSS', 'Material UI'],
 };
 
-export const techLabels: Record<keyof Technologies, string> = {
+export const techLabels: TechLabels = {
   languages: 'Languages',
   backend: 'Backend',
   'ai-ml': 'AI/ML',

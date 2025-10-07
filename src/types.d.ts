@@ -8,6 +8,8 @@ declare global {
     'frontend': string[];
   }
 
+  type TechLabels = Record<keyof Technologies, string>;
+
   interface Project {
     id: string;
     title: string;

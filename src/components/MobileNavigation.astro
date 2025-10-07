@@ -1,7 +1,5 @@
 ---
-import githubIcon from '../assets/github.svg';
-import linkedinIcon from '../assets/linkedin.svg';
-import linktreeIcon from '../assets/linktree.svg';
+import icons from '@/icons';
 ---
 
 <!-- Mobile Navigation - Hidden on larger screens -->
@@ -71,17 +69,17 @@ import linktreeIcon from '../assets/linktree.svg';
                 <div class="flex justify-center space-x-8">
                     <!-- GitHub Icon -->
                     <a href="https://github.com/Mohd-Misran" target="_blank" class="mobile-nav-link">
-                        <img src={githubIcon.src} alt="GitHub" class="w-8 h-8 opacity-70 hover:opacity-100 transition-opacity"/>
+                        <img src={icons.github.src} alt="GitHub" class="w-8 h-8 opacity-70 hover:opacity-100 transition-opacity"/>
                     </a>
                     
                     <!-- LinkedIn Icon -->
                     <a href="https://www.linkedin.com/in/mmisran" target="_blank" class="mobile-nav-link">
-                        <img src={linkedinIcon.src} alt="LinkedIn" class="w-8 h-8 opacity-70 hover:opacity-100 transition-opacity"/>
+                        <img src={icons.linkedIn.src} alt="LinkedIn" class="w-8 h-8 opacity-70 hover:opacity-100 transition-opacity"/>
                     </a>
 
                     <!-- Linktree Icon -->
                     <a href="https://linktr.ee/mmisran" target="_blank" class="mobile-nav-link">
-                        <img src={linktreeIcon.src} alt="Linktree" class="w-8 h-8 opacity-70 hover:opacity-100 transition-opacity"/>
+                        <img src={icons.linktree.src} alt="Linktree" class="w-8 h-8 opacity-70 hover:opacity-100 transition-opacity"/>
                     </a>
                 </div>
             </div>
