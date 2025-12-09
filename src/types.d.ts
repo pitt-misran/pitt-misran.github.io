@@ -19,6 +19,16 @@ declare global {
     githubUrl?: string;
     learnMoreUrl?: string;
   }
+
+  interface WorkExperience {
+    id: string;
+    company: string;
+    role: string;
+    period: string;
+    description: string;
+    logo: ImageMetadata;
+    achievements?: string[];
+  }
 }
 
 export {};

@@ -5,6 +5,7 @@ import Headline from "../components/Headline.astro";
 import MobileNavigation from "../components/MobileNavigation.astro";
 import SkillsGrid from "../components/SkillsGrid.tsx";
 import AboutMeSection from "@/components/AboutMeSection.tsx";
+import WorkSection from "@/components/WorkSection.tsx";
 import ProjectsSection from "../components/ProjectsSection.tsx";
 ---
 
@@ -45,15 +46,19 @@ import ProjectsSection from "../components/ProjectsSection.tsx";
     </div>
 
     <!-- Sections with scroll snap -->
-    <section class="p-4 md:snap-start md:h-screen md:flex md:items-center md:pt-16">
+    <section id="home" class="p-4 md:snap-start md:h-screen md:flex md:items-center md:pt-16">
         <Headline />
     </section>
 
-    <section class="p-4 md:snap-start md:min-h-screen md:flex md:items-center">
+    <section id="about-me" class="p-4 md:snap-start md:min-h-screen md:flex md:items-center">
         <AboutMeSection client:load />
     </section>
 
-    <section class="p-4 md:snap-start md:min-h-screen md:flex md:items-center">
+    <section id="work" class="p-4 md:snap-start md:min-h-screen md:flex md:items-center">
+        <WorkSection client:load />
+    </section>
+
+    <section id="projects" class="p-4 md:snap-start md:min-h-screen md:flex md:items-center">
         <ProjectsSection client:load />
     </section>
 
