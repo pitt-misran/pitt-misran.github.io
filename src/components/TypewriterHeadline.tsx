@@ -17,7 +17,7 @@ export default function TypewriterHeadline({ isMobile = false }: TypewriterHeadl
     { text: 'Misran is an ' },
     { text: 'AWS expert', highlight: true },
     { text: ' and a ' },
-    { text: 'back-end developer', highlight: true }
+    { text: 'back-end engineer', highlight: true }
   ];
   
   const fullText = textParts.map(part => part.text).join('');
