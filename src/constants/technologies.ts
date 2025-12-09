@@ -1,10 +1,10 @@
 export const technologies: Technologies = {
-  languages: ['Java', 'Python', 'JavaScript & TypeScript', 'Go', 'Scala', 'SQL'],
-  backend: ['Spring', 'Spring Boot', 'FastAPI', 'NestJS', 'GraphQL', 'Go Fiber'],
+  languages: ['Java', 'Python', 'JavaScript', 'TypeScript', 'Go', 'Scala', 'SQL'],
+  backend: ['Spring', 'Spring Boot', 'FastAPI', 'Flask', 'NestJS', 'GraphQL', 'Go Fiber'],
   'ai-ml': ['Pydantic AI', 'LangChain', 'LangGraph', 'Pandas', 'NumPy', 'Matplotlib'],
-  tools: ['Amazon Web Services (AWS)', 'Git', 'Docker', 'Kubernetes', 'Claude Code', 'Cursor'],
+  tools: ['Amazon Web Services (AWS)', 'Google Cloud Platform (GCP)', 'Git', 'Docker', 'Kubernetes', 'Claude Code', 'Cursor'],
   'big-data': ['Apache Spark', 'Apache Kafka', 'Apache Samza', 'Databricks'],
-  frontend: ['Next.js & React', 'React Native', 'Astro', 'Redux', 'Tailwind CSS', 'Material UI'],
+  frontend: ['Next.js', 'React', 'React Native', 'Astro', 'Redux', 'Tailwind CSS', 'Material UI'],
 };
 
 export const techLabels: TechLabels = {

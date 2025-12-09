@@ -20,7 +20,9 @@ export default function ProjectsSection() {
       {/* View All Projects Link */}
       <div className="flex justify-center mt-12">
         <a
-          href="#all-projects"
+          href="https://github.com/misran3"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-[#C778DD] text-lg font-medium hover:underline transition-all duration-300 flex items-center gap-2"
         >
           View all projects

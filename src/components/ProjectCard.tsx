@@ -11,7 +11,7 @@ export default function ProjectCard({
   learnMoreUrl,
 }: ProjectCardProps) {
   return (
-    <div className="bg-[#282C34] border border-[#ABB2BF]/20 overflow-hidden hover:border-[#C778DD]/50 transition-all duration-300 group w-90 h-110 flex flex-col">
+    <div className="bg-[#282C34] border border-[#ABB2BF]/20 overflow-hidden hover:border-[#C778DD]/50 transition-all duration-300 group w-90 h-130 flex flex-col">
       {/* Project Image */}
       <div className="relative overflow-hidden flex-shrink-0">
         <img
