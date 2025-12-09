@@ -7,6 +7,8 @@ import SkillsGrid from "../components/SkillsGrid.tsx";
 import AboutMeSection from "@/components/AboutMeSection.tsx";
 import WorkSection from "@/components/WorkSection.tsx";
 import ProjectsSection from "../components/ProjectsSection.tsx";
+import ContactSection from "@/components/ContactSection.tsx";
+import Footer from "../components/Footer.astro";
 ---
 
 <!-- NOTE: For differentiating layout -->
@@ -71,7 +73,13 @@ import ProjectsSection from "../components/ProjectsSection.tsx";
         </div>
     </section>
 
+    <section id="contact" class="p-4 md:snap-start md:min-h-screen md:flex md:items-center">
+        <ContactSection client:load />
+    </section>
+
     <slot />
+
+    <Footer />
 </div>
 
 <script>
