@@ -50,9 +50,9 @@ export const projects: Project[] = [
   {
     id: 'portfolio-website',
     title: 'Portfolio Website',
-    description: 'Personal portfolio website showcasing projects and skills.',
+    description: 'Personal portfolio website showcasing projects and skills, automatically deployed to GitHub Pages using GitHub Actions.',
     image: portfolioImg,
-    techStack: ['Astro', 'React', 'TypeScript', 'Tailwind CSS'],
+    techStack: ['Astro', 'React', 'TypeScript', 'Tailwind CSS', 'Github Actions'],
     githubUrl: 'https://github.com/pitt-misran/pitt-misran.github.io',
   }
 ];
