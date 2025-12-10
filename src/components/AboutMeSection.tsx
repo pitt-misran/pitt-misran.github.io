@@ -13,10 +13,12 @@ export default function AboutMeSection() {
       <div className="mb-8 text-left">
         <p className="text-[#ABB2BF] text-base leading-relaxed">
           Innovative <span className="text-[#C778DD] font-bold">Software Engineer with 2+ years of experience</span>{' '}
-          turning AWS into a competitive advantage &mdash; specializing in{' '}
+          turning Amazon Web Services (AWS) into a competitive advantage &mdash; specializing in{' '}
           <span className="text-[#C778DD] font-bold">Serverless Applications</span>,{' '}
-          <span className="text-[#C778DD] font-bold">Microservices</span>, and{' '}
-          <span className="text-[#C778DD] font-bold">Agentic Workflows</span>.
+          <span className="text-[#C778DD] font-bold">Microservices</span>,{' '}
+          <span className="text-[#C778DD] font-bold">AI-powered solutions</span>,{' '}
+          <span className="text-[#C778DD] font-bold">Agentic Workflows</span>, and{' '}
+          <span className="text-[#C778DD] font-bold">Cloud Infrastructure</span>.
         </p>
         <p className="text-[#ABB2BF] text-base leading-relaxed mt-4">
           I fuse deep cloud expertise with product mindset to architect scalable, AI-powered customer experiences that

@@ -14,10 +14,10 @@ export default function TypewriterHeadline({ isMobile = false }: TypewriterHeadl
   const [scrambledText, setScrambledText] = useState('');
   
   const textParts: TextPart[] = [
-    { text: 'Misran is an ' },
-    { text: 'AWS expert', highlight: true },
-    { text: ' and a ' },
-    { text: 'back-end engineer', highlight: true }
+    { text: 'Misran is a ' },
+    { text: 'Software Engineer', highlight: true },
+    { text: ' who moves from idea to execution, leads early, and knows how to make ' },
+    { text: 'technical solutions work for real business problems.', highlight: true }
   ];
   
   const fullText = textParts.map(part => part.text).join('');
