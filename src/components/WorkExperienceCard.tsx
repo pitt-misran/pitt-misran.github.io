@@ -39,8 +39,8 @@ export default function WorkExperienceCard({
         <div className="mt-4">
           <ul className="space-y-2">
             {achievements.map((achievement, index) => (
-              <li key={index} className="flex items-start gap-2 text-[#ABB2BF] text-sm">
-                <span className="text-[#C778DD] mt-1 flex-shrink-0">▹</span>
+              <li key={index} className="flex items-center gap-2 text-[#ABB2BF] text-sm">
+                <span className="text-[#C778DD] flex-shrink-0">&#9642;</span>
                 <span>{achievement}</span>
               </li>
             ))}
