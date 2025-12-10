@@ -4,7 +4,7 @@ import { workExperiences } from '../constants/work';
 
 export default function WorkSection() {
   return (
-    <section className="mt-16">
+    <section className="mt-16 w-full">
       {/* Section Title */}
       <div className="mb-12">
         <SectionTitle title="work" />

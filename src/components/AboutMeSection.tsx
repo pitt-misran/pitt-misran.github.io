@@ -3,7 +3,7 @@ import RecentTechnologies from '@/components/RecentTechnologies';
 
 export default function AboutMeSection() {
   return (
-    <section className="mt-16">
+    <section className="mt-16 w-full">
       {/* Section Title */}
       <div className="mb-12">
         <SectionTitle title="about-me" />

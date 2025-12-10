@@ -4,7 +4,7 @@ import { projects } from '../constants/projects';
 
 export default function ProjectsSection() {
   return (
-    <section className="mt-16">
+    <section className="mt-16 w-full">
       {/* Section Title */}
       <div className="mb-12">
         <SectionTitle title="projects" />
